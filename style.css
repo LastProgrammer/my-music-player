@@ -1,0 +1,266 @@
+body {
+    background: url("bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.select {
+    color: rgb(0, 70, 3);
+    background-color: rgb(88, 255, 55);
+}
+
+div {
+    width: 250px;
+    background-color: rgb(161, 255, 145);
+    font-size: 20px;
+    font-family: 'Dokdo', cursive;
+}
+
+#musicName {
+    top: 0px;
+    display: inline-block;
+    vertical-align: top;
+    float: right;
+    border-radius: 0px 40px 10px 70px;
+}
+
+input {
+    display: block;
+}
+
+input[type="text"] {
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    background: #ffffff !important;
+    outline: none;
+    height: 24px;
+    width: 170px;
+    color: #cccccc;
+    font-size: 20px;
+    font-family: Tahoma;
+    font-family: 'Rubik', sans-serif;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+input[type="text"]:focus {
+    color: #000000;
+    border: 1px solid #000000
+}
+
+#audioFile {
+    margin: 20% auto;
+    background-color: transparent;
+}
+
+audio {
+    display: none;
+}
+
+#audioContant {
+    z-index: 2;
+    height: 200px;
+    width: 200px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 25px;
+    position: relative;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,.15);
+    transition: .5s linear;
+}
+
+#disk.musicPlay {
+    margin-left: 120px; 
+    transform: rotate(360deg); 
+}
+
+#icoPlayOrPause {
+    transform: translate(46px , 85px);
+}
+
+#disk {
+    top: 46%;
+    position: absolute;
+    height: 140px;
+    width: 140px;
+    z-index: 1;
+    border-radius: 50%;
+    background: transparent;
+    margin: 20px;
+    transition: .9s linear;
+    box-shadow:
+        0 8px 6px -8px rgba(0,0,0,0.5),
+        0 0 1px 1px rgba(0,0,0,0.5),
+        0 0 0 1px #666 inset,
+        0 0 0 2px #222 inset,
+        0 30px 0px -29px #444 inset,
+        0 -30px 0px -29px #444 inset,
+        0 0 0 3px #333 inset,
+        0 0 0 4px #222 inset,
+        0 0 0 5px #333 inset,
+        0 33px 0px -27px #444 inset,
+        0 -33px 0px -27px #444 inset,
+        0 0 0 6px #222 inset,
+        0 0 0 7px #333 inset,
+        0 0 0 8px #222 inset,
+        0 34px 0px -25px #444 inset,
+        0 -34px 0px -25px #444 inset,
+        0 0 0 9px #333 inset,
+        0 0 0 10px #222 inset,
+        0 0 0 11px #333 inset,
+        0 35px 0px -23px #444 inset,
+        0 -35px 0px -23px #444 inset,
+        0 0 0 12px #222 inset,
+        0 0 0 13px #333 inset,
+        0 0 0 14px #222 inset,
+        0 36px 0px -21px #444 inset,
+        0 -36px 0px -21px #444 inset,
+        0 0 0 15px #333 inset,
+        0 0 0 16px #222 inset,
+        0 0 0 17px #333 inset,
+        0 37px 0px -19px #444 inset,
+        0 -37px 0px -19px #444 inset,
+        0 0 0 18px #222 inset,
+        0 0 0 19px #333 inset,
+        0 0 0 20px #222 inset,
+        0 38px 0px -17px #444 inset,
+        0 -38px 0px -17px #444 inset,
+        0 0 0 21px #333 inset,
+        0 0 0 22px #222 inset,
+        0 0 0 23px #333 inset,
+        0 39px 0px -15px #444 inset, 
+        0 -39px 0px -15px #444 inset, 
+        0 0 0 24px #222 inset,
+        0 0 0 25px #333 inset,  
+        0 0 0 26px #222 inset,
+        0 40px 0px -13px #444 inset,
+        0 -40px 0px -13px #444 inset,
+        0 0 0 27px #333 inset,
+        0 0 0 28px #222 inset,
+        0 0 0 29px #333 inset,
+        0 41px 0px -11px #444 inset,
+        0 -41px 0px -11px #444 inset,
+        0 0 0 30px #222 inset,
+        0 0 0 43px #333 inset,
+        0 0 0 45px #AF2A10 inset,
+        0 0 0 47px #333 inset,
+        0 0 0 62px #AF2A10 inset,
+        0 0 10px 78px rgba(0,0,0,0.5) inset;
+}
+
+#box {
+    top: 60px;
+    left: 30%;
+    position: relative;
+    height: 700px;
+    width: 600px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 40px;
+}
+
+#animeName {
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 40px 0 70px 10px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+#accept, #audioAccept {
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 40px 40px rgb(92, 252, 71) inset, 0 0 0 0 rgb(113, 255, 88);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: rgb(183, 0, 255);
+    transition: .15s ease-in-out;
+    margin: 0 auto;
+    width: 70%;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+#accept:hover, #audioAccept:hover {
+  box-shadow: 0 0 10px 0 rgb(0, 167, 14) inset, 0 0 10px 4px rgb(0, 185, 25);
+  color: rgb(0, 148, 0);
+}
+
+#volumeAdd {
+    transform: translate(20px 100px);
+    height: 40px;
+    width: 40px;
+}
+
+#box11 {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    background-color: red;
+    position: absolute;
+    box-shadow: 0px 0px 5px red;
+}
+
+td {
+    height: 30px;
+    width: 30px;
+    background-color: rgb(93, 93, 93);
+    border-radius: 5px;
+    color: black;
+    text-align: center;
+    border-color: rgb(223, 211, 211);
+}
+
+td:hover {
+    background-color: rgb(65, 65, 65);
+}
+
+#space {
+    height: 40px;
+    width: 100%;
+    position: absolute;
+}
+
+#klava1 {
+    top: 0%;
+    left: 30%;
+    position: absolute;
+    height: 50px;
+    width: 140px;
+    transition: 1s;
+    padding: 5px 20px;
+}
+
+#klava1:hover {
+    cursor: pointer;
+    background-color: rgb(0, 226, 0);
+    box-shadow: 0 0 30px green;
+    border-radius: 10%;
+}
+
+#klava2 {
+    left: 60%;
+    top: 0%;
+    position: absolute;
+    height: 50px;
+    width: 140px;
+    transition: 1s;
+    padding: 5px 20px;
+}
+
+#klava2:hover {
+    cursor: pointer;
+    background-color: rgb(0, 226, 0);
+    box-shadow: 0 0 30px green;
+    border-radius: 10%;
+}
+
+#homeWork {
+    position: absolute;
+}
