@@ -264,3 +264,23 @@ td:hover {
 #homeWork {
     position: absolute;
 }
+
+#disable {
+    position: absolute;
+    background-color: red;
+    height: 80px;
+    width: 255px;
+    left: 30%;
+    top: 300px;
+    opacity: 0;
+}
+
+#disable2 {
+    position: absolute;
+    background-color: red;
+    height: 80px;
+    width: 255px;
+    left: 30%;
+    top: 300px;
+    opacity: 1;
+}

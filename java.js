@@ -45,11 +45,11 @@ window.onload = function () {
     let selectAnime;
     let audio;
     let klavaReady = [0,0];
-    $("#accept").prop('disabled', true);
+    DisableOrEnableButton(1,true);
 
     $("div input[type ='text']").on("input",searchElement);
 
-    
+
     $("#accept").on("click",()=>{
         $("#klava2").remove();
         $("#musicName").remove();
@@ -97,6 +97,8 @@ window.onload = function () {
         let butt = parent.find("input[type = 'button']")//кнопка подтверждения
         let musicNameSelect;
         let li = parent.find("li");
+            DisableOrEnableButton(1,true);
+            DisableOrEnableButton(2,true);
         butt.prop('disabled', true);
         li.removeClass("select");
         // console.log($(textButt[0]).val());
@@ -114,7 +116,8 @@ window.onload = function () {
         musicNameSelect = parent.find(".select");
         console.log(musicNameSelect);
         if (musicNameSelect.length == 1) {
-            butt.prop('disabled', false);
+                DisableOrEnableButton(1,false);
+                DisableOrEnableButton(2,false);
         }
     }
 
@@ -161,11 +164,13 @@ window.onload = function () {
             $("#disk").addClass("musicPlay");
         }
     }
+
     function getConsole(inp) {
         let arr = [
-            ["й","ц","у","к","е","н","г","ш","щ","з"],
-            ["ф","ы","в","а","п","р","о","л","д","ж"],
-            ["я","ч","с","м","и","т","ь","б","ю","del"],
+            ["1","2","3","4","5","6","7","8","9","0","-"],
+            ["й","ц","у","к","е","н","г","ш","щ","з","х"],
+            ["ф","ы","в","а","п","р","о","л","д","ж","э"],
+            ["я","ч","с","м","и","т","ь","б","ю",".","del"],
             ["space"]
         ]
         $("#box11").remove();
@@ -226,4 +231,24 @@ window.onload = function () {
     });
 
 
+    //функция заблокирует или разблокирует выбраную кнопку
+    function DisableOrEnableButton(butt,trueOrFalse) {
+        if (trueOrFalse == true) {
+            if (butt == 1) {
+                $("<div id = 'disable'></div>").appendTo("body");
+            }
+            else if (butt == 2) {
+                $("<div id = 'disable2'></div>").appendTo("body");
+            }
+            
+        }
+        else {
+            if (butt == 1) {
+                $("#disable").remove();
+            }
+            else if (butt == 2) {
+                $("#disable2").remove();
+            }
+        }
+    }
 }
